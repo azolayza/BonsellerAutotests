@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "shopId": {
+      "type": "integer"
+    },
+    "token": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "productsEnabled": {
+          "type": "boolean"
+        },
+        "staffMainScreenEnabled": {
+          "type": "boolean"
+        },
+        "cashRegisterEnabled": {
+          "type": "boolean"
+        },
+        "reportsEnabled": {
+          "type": "boolean"
+        },
+        "shouldIdentifyFirst": {
+          "type": "boolean"
+        },
+        "atolIntegrationEnabled": {
+          "type": "boolean"
+        },
+        "showProductsAfterIdentification": {
+          "type": "boolean"
+        },
+        "twoCanIntegrationEnabled": {
+          "type": "boolean"
+        },
+        "turboModeEnabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "productsEnabled",
+        "staffMainScreenEnabled",
+        "cashRegisterEnabled",
+        "reportsEnabled",
+        "shouldIdentifyFirst",
+        "atolIntegrationEnabled",
+        "showProductsAfterIdentification",
+        "twoCanIntegrationEnabled",
+        "turboModeEnabled"
+      ]
+    },
+    "redirectUrl": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "id",
+    "shopId",
+    "token",
+    "options",
+    "redirectUrl"
+  ]
+}
