@@ -1,5 +1,7 @@
 package com.azovcevae.tests.UI;
 
+import com.azovcevae.allure.JiraIssue;
+import com.azovcevae.allure.JiraIssues;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.pages.WebElementsPage;
@@ -28,6 +30,7 @@ public class AuthorizationTests extends TestBaseUI {
    @Description("Тест проверяет авторизацию продавца в приложении Веб Бонселлер по номеру телефона и коду авторизации)")
    @DisplayName("Проверка успешной авторизации")
    @Tags({@Tag("ui"), @Tag("bonseller")})
+   @JiraIssues({@JiraIssue("HOMEWORK-367")})
    @Severity(SeverityLevel.BLOCKER)
    void successLogin() {
        step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
@@ -38,6 +41,7 @@ public class AuthorizationTests extends TestBaseUI {
     @Description("Тест проверяет, что невозможно нажать на Войти не введя номер телефона")
     @DisplayName("Проверка недоступности кнопки Войти без номера телефона")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void unavailableLoginWithoutPhone() {
         step("open https://dev.seller.bonpass.com/login", () -> bonsellerPage.openPage());
@@ -51,6 +55,7 @@ public class AuthorizationTests extends TestBaseUI {
     @Description("Тест проверяет, что невозможно нажать на Войти не введя пароль")
     @DisplayName("Кнопка Войти недоступна без пароля")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void unavailableLoginWithoutPass() {
         step("open https://dev.seller.bonpass.com/login", () -> bonsellerPage.openPage());
@@ -64,6 +69,7 @@ public class AuthorizationTests extends TestBaseUI {
     @Description("Тест проверяет ошибку авторизации с неверным номером телефона")
     @DisplayName("Ошибка авторизации с неверным телефоном")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.TRIVIAL)
     void negativeLoginWithInvalidPhone() {
         step("open https://dev.seller.bonpass.com/login", () -> bonsellerPage.openPage());
@@ -75,6 +81,7 @@ public class AuthorizationTests extends TestBaseUI {
     @Description("Тест проверяет ошибку авторизации с неверным паролем")
     @DisplayName("Ошибка авторизации с неверным паролем")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.TRIVIAL)
     void negativeLoginWithInvalidPass() {
         step("open https://dev.seller.bonpass.com/login", () -> bonsellerPage.openPage());

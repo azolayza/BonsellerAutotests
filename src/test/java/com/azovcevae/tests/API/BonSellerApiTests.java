@@ -41,6 +41,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка генерации токена во время логина")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.BLOCKER)
     void SuccessGenerateBonsellerToken() {
         String data = "{\"login\":\"79009005050\",\"password\":\"2508\"}";
@@ -59,6 +60,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения профиля кассира")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void getSellerProfile(){
         SellerProfile sellerProfile =given(BonSellerSpec.request)
@@ -76,6 +78,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения плана продаж кассира")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void getSellerPlan(){
         given(BonSellerSpec.request)
@@ -92,6 +95,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения списка скриптов для кассира")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.TRIVIAL)
     void getSellerScripts(){
         given(BonSellerSpec.request)
@@ -107,6 +111,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения каталога продуктов заведения")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.CRITICAL)
     void getProductsList(){
         given(BonSellerSpec.request)
@@ -123,6 +128,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения получения списка черновиков (сохраненных) чеков")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void getWaitingList(){
         given(BonSellerSpec.request)
@@ -138,6 +144,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения истории продаж за выбранный период времени")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void getHistoryOnPeriod(){
         given(BonSellerSpec.request)
@@ -157,6 +164,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения отчета по скидкам за выбранный период времени")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void getReportOnPeriod(){
         given(BonSellerSpec.request)
@@ -176,6 +184,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения информации о покупателе по номеру телефона")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.CRITICAL)
     void searchCustomerByPhone(){
         String customerPhone = "79059050505";
@@ -196,6 +205,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Создание нового заказа для идентифицированного покупателя")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.BLOCKER)
     void confirmedNewOrderWithCustomer(){
         given(BonSellerSpec.request)
@@ -214,6 +224,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Создание новой анонимной покупки без идентификации покупателя")
     @Tags({@Tag("api"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void confirmedNewOrderForAnonymous(){
         String orderDetails = "{\"products\":[{\"productId\":749708,\"amount\":2,\"cost\":5600.0}],\"gifts\":[]}";
@@ -234,7 +245,7 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Создание черновика (status=2) заказа для идентифицированного покупателя")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("???")})
+    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
     void savedNewOrderWithCustomer(){
         Order order =

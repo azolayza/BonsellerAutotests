@@ -1,5 +1,7 @@
 package com.azovcevae.tests.UI;
 
+import com.azovcevae.allure.JiraIssue;
+import com.azovcevae.allure.JiraIssues;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.pages.WebElementsPage;
@@ -26,6 +28,7 @@ public class NavigationMenuTests extends TestBaseUI {
     @Description("Тест проверяет команду Выход через главное меню и возврат на страницу атворизации")
     @DisplayName("Успешный выход из приложения")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void logoutSeller() {
         step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
@@ -38,6 +41,7 @@ public class NavigationMenuTests extends TestBaseUI {
     @Description("Тест проверяет переход с главной страницы на страницу Истории")
     @DisplayName("Переход на страницу Истории через меню")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void goToHistoryPage() {
         step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
@@ -49,6 +53,7 @@ public class NavigationMenuTests extends TestBaseUI {
     @Description("Тест проверяет переход с главной страницы на страницу Отчета")
     @DisplayName("Переход на страницу Отчета через меню")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void goToReportPage() {
         step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
@@ -60,6 +65,7 @@ public class NavigationMenuTests extends TestBaseUI {
     @Description("Тест проверяет переход с главной страницы на страницу Справки")
     @DisplayName("Переход на страницу Справки через меню")
     @Tags({@Tag("ui"), @Tag("bonseller")})
+    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void goToHelpPage() {
         step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
