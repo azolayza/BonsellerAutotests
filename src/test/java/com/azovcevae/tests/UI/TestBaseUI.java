@@ -1,9 +1,9 @@
 package com.azovcevae.tests.UI;
 
-import com.bonpass.bonseller.config.Project;
-import com.bonpass.bonseller.helpers.AllureAttachments;
-import com.bonpass.bonseller.helpers.DriverSettings;
-import com.bonpass.bonseller.helpers.DriverUtils;
+import com.azovcevae.config.Project;
+import com.azovcevae.helper.AllureAttachments;
+import com.azovcevae.helper.DriverSettings;
+import com.azovcevae.helper.DriverUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
