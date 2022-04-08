@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class BonSellerAppTests {
 
     @Test
-    @Disabled
+    @Disabled("With reason don't work it")
     void RunBonsellerTest() {
         $(AppiumBy.id("com.bonpass.seller.v2.dev:id/login_phone_number_edit_text"))
                 .click();

@@ -4,7 +4,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
@@ -28,11 +27,5 @@ public class SimpleTest {
     public void tearDown()
     {
         driver.quit();
-    }
-
-    @Test
-    public void firstTest()
-    {
-        System.out.println("First test run");
     }
 }
