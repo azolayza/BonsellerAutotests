@@ -1,4 +1,4 @@
-package com.azovcevae.tests;
+package com.azovcevae.tests.mobile;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;

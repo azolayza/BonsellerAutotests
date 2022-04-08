@@ -1,13 +1,15 @@
-package com.azovcevae.tests;
+package com.azovcevae.tests.mobile;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BonSellerAppTests {
 
     @Test
+    @Disabled
     void RunBonsellerTest() {
         $(AppiumBy.id("com.bonpass.seller.v2.dev:id/login_phone_number_edit_text"))
                 .click();

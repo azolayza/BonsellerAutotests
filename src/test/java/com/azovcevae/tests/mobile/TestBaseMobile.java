@@ -1,4 +1,4 @@
-package com.azovcevae.tests;
+package com.azovcevae.tests.mobile;
 
 import com.azovcevae.driver.AndroidEmulatorDriver;
 import com.azovcevae.helper.Attach;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
-public class TestBase {
+public class TestBaseMobile {
     @BeforeAll
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
