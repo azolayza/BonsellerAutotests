@@ -9,10 +9,7 @@ import com.azovcevae.tests.API.model.Customer;
 import com.azovcevae.tests.API.model.Order;
 import com.azovcevae.tests.API.model.SellerProfile;
 import com.azovcevae.tests.API.spec.BonSellerSpec;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -29,6 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Owner("azovtsevae")
 @Layer("api")
 @Microservice("BonSeller")
+@Feature("API-tests")
 @DisplayName("Проверка методов Bonseller API")
 public class BonSellerApiTests {
 

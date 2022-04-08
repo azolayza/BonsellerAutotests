@@ -5,10 +5,7 @@ import com.azovcevae.allure.JiraIssues;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.pages.WebElementsPage;
-import io.qameta.allure.Description;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -22,6 +19,7 @@ import static io.qameta.allure.Allure.step;
 @Owner("azovtsevae")
 @Layer("ui")
 @Microservice("BonSeller")
+@Feature("WEB-Authorization")
 @DisplayName("Проверка Bonseller веб авторизации")
 public class AuthorizationTests extends TestBaseUI {
     WebElementsPage bonsellerPage = new WebElementsPage();
