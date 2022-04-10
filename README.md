@@ -2,8 +2,9 @@
 ![BonPass](./img/bonpass.png)
 
 ## BonSeller
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это один из сервисов CRM системы [BonPass](https://bonpass.com/)
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это один из сервисов CRM системы [BonPass](https://bonpass.com/)
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
 
 ## :spiral_notepad: Тестовое покрытие:
 
