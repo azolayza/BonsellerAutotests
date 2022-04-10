@@ -109,3 +109,12 @@ gradle clean test
 
 ### Уведомление о прохождении тестов в Telegram
 ![Allure2](./img/telegram-bonseller-report.png)
+## <img width="4%" title="Telegram" src="images/daramirra_Telegram.svg"> Уведомления в Telegram
+
+<p align="center">
+  <img src="img/telegram-bonseller-report.png" alt="Telegram" width="440">
+</p>
+
+## Контакты
+[<img title="My Github" alt="daramirra | Github" width="30px" src="https://github.githubassets.com/favicons/favicon.svg">](https://github.com/azolayza)
+[<img title="My Telegram" alt="daramirra | Telegram" width="30px" src="https://telegram.org/favicon.ico">](https://t.me/azolayza) 
