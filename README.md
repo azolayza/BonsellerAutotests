@@ -1,14 +1,17 @@
 # Автотесты разработаны для [Web BonSeller](https://seller.bonpass.com/) 
 ![BonPass](./img/bonpass.png)
+
 BonSeller
 - это один из сервисов CRM системы [BonPass](https://bonpass.com/)
 - это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
 ## Тестовое покрытие:
 
-- [x] UI тесты на проверку авторизации на странице https://seller.bonpass.com/login
-- [x] UI тесты на проверку навигации по страницам приложения
+- [x] UI тесты на проверку авторизации и навигации на странице [BonSeller](https://seller.bonpass.com/login)
+  - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-370)
 - [x] API тесты на регрес проверку базовых методов работы приложения
+  - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-366)
 - [x] Ручные тесты проверки верстки приложения и тестов на основе динамических кодов подтверждения
+  - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-367)
 
 ## Технологии и инструменты
 
@@ -44,7 +47,7 @@ BonSeller
 ```
 gradle clean test 
 ```
-### Для удаленного запуска тестов воспользуйтесь [Jenkins](https://jenkins.autotests.cloud/job/09_sprokaev_Web-UI_API/build?delay=0sec)
+### Для удаленного запуска тестов воспользуйтесь [Jenkins](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/build?delay=0sec)
 Параметры для запуска:
 - BROWSER (по умолчанию chrome)
 - BROWSER_VERSION (по умолчанию 100.0)
@@ -59,14 +62,14 @@ gradle clean test
 ### Видео-отчет о прохождении теста из Selenoid:
 ![Selenoid](./img/video.gif)
 
-### Результаты прохождения тестов в [Allure Report](https://jenkins.autotests.cloud/job/09_sprokaev_Web-UI_API/27/allure/)
+### Результаты прохождения тестов в [Allure Report](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/17/allure/)
 ![Allure1](./img/allure-report1.png)
 
 ### Результаты прохождения тестов в Allure TestOps
 ![Allure2](./img/testOps-testcases.png)
 
 ### Результаты прохождения тестов в Jira
-![Allure2](./images/bonseller-jira-task.png)
+![Allure2](./img/bonseller-jira-task.png)
 
 ### Уведомление о прохождении тестов в Telegram
-![Allure2](./images/telegram-bonseller-report.png)
+![Allure2](./img/telegram-bonseller-report.png)
