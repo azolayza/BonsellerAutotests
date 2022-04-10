@@ -1,21 +1,22 @@
 # Автотесты разработаны для [Web BonSeller](https://seller.bonpass.com/) 
 ![BonPass](./img/bonpass.png)
 
-BonSeller
+##BonSeller
 - это один из сервисов CRM системы [BonPass](https://bonpass.com/)
 - это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
 
 ## :spiral_notepad: Тестовое покрытие:
 
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI Authorization And Navigation tests- задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
 <p align="center">
   <img src="img/ui-cases.png" alt="dashboards" width="900">
 </p>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests- задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
 <p align="center">
   <img src="img/api-cases.png" alt="dashboards" width="900">
 </p>
+
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manual cases - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-367)
 <p align="center">
   <img src="img/manual-cases.png" alt="dashboards" width="900">
@@ -128,5 +129,5 @@ gradle clean test
 </p>
 
 ## Контакты
-[<img title="My Github" alt="daramirra | Github" width="30px" src="https://github.githubassets.com/favicons/favicon.svg">](https://github.com/azolayza)
-[<img title="My Telegram" alt="daramirra | Telegram" width="30px" src="https://telegram.org/favicon.ico">](https://t.me/azolayza) 
+[<img title="My Github" alt="azolayza | Github" width="30px" src="https://github.githubassets.com/favicons/favicon.svg">](https://github.com/azolayza)
+[<img title="My Telegram" alt="azolayza | Telegram" width="30px" src="https://telegram.org/favicon.ico">](https://t.me/azolayza) 
