@@ -8,10 +8,19 @@ BonSeller
 
 - [x] UI тесты на проверку авторизации и навигации на странице [BonSeller](https://seller.bonpass.com/login)
   - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-370)
+<p align="center">
+  <img src="img/ui-cases.png" alt="dashboards" width="900">
+</p>
 - [x] API тесты на регрес проверку базовых методов работы приложения
   - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-366)
+<p align="center">
+  <img src="img/api-cases.png" alt="dashboards" width="900">
+</p>
 - [x] Ручные тесты проверки верстки приложения и тестов на основе динамических кодов подтверждения
   - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-367)
+<p align="center">
+  <img src="img/manual-cases.png" alt="dashboards" width="900">
+</p>
 
 ## Технологии и инструменты
 
@@ -101,14 +110,18 @@ gradle clean test
   <img src="img/testOps-testcases.png" alt="test cases" width="900">
 </p>
 
+### :pushpin: Обнаруженные ошибки (Defects)
+
+<p align="center">
+  <img src="img/testops-defects.png" alt="test cases" width="900">
+</p>
+
 ## <img width="4%" title="Jira" src="img/logo/jira-logo.svg"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-269)
 
 <p align="center">
   <img src="img/bonseller-jira-task.png" alt="jira" width="1000">
 </p>
 
-### Уведомление о прохождении тестов в Telegram
-![Allure2](./img/telegram-bonseller-report.png)
 ## <img width="4%" title="Telegram" src="images/daramirra_Telegram.svg"> Уведомления в Telegram
 
 <p align="center">
