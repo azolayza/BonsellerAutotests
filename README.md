@@ -4,25 +4,24 @@
 BonSeller
 - это один из сервисов CRM системы [BonPass](https://bonpass.com/)
 - это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
-## Тестовое покрытие:
 
-- [x] UI тесты на проверку авторизации и навигации на странице [BonSeller](https://seller.bonpass.com/login)
-  - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-370)
+## :spiral_notepad: Тестовое покрытие:
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
 <p align="center">
   <img src="img/ui-cases.png" alt="dashboards" width="900">
 </p>
-- [x] API тесты на регрес проверку базовых методов работы приложения
-  - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-366)
+
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
 <p align="center">
   <img src="img/api-cases.png" alt="dashboards" width="900">
 </p>
-- [x] Ручные тесты проверки верстки приложения и тестов на основе динамических кодов подтверждения
-  - задача [JIRA] (https://jira.autotests.cloud/browse/HOMEWORK-367)
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manual cases - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-367)
 <p align="center">
   <img src="img/manual-cases.png" alt="dashboards" width="900">
 </p>
 
-## Технологии и инструменты
+## :rocket: Технологии и инструменты
 
 <p  align="center">
 
