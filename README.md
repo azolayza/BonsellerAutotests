@@ -65,9 +65,7 @@ gradle clean test
 ### Видео-отчет о прохождении теста из Selenoid:
 ![Selenoid](./img/video.gif)
 
-### Отчет о результатах тестирования в Allure Report 
-[Allure Report](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/17/allure/)
-## <img width="4%" title="Allure Report" src="img/logo/allure-report-logo.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/8/allure/)
+## <img width="4%" title="Allure Report" src="img/logo/allure-report-logo.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/17/allure/)
 
 ### :pushpin: Общая информация
 
