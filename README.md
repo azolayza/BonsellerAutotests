@@ -8,18 +8,21 @@
 
 ## :spiral_notepad: Тестовое покрытие:
 
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI Authorization And Navigation tests- задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
-<p align="center">
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI Authorization And Navigation tests
+:lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
+<p align="left">
   <img src="img/ui-cases.png" alt="dashboards" width="900">
 </p>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests- задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
-<p align="center">
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
+:lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
+<p align="left">
   <img src="img/api-cases.png" alt="dashboards" width="900">
 </p>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manual cases - задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-367)
-<p align="center">
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manual cases
+:lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-367)
+<p align="left">
   <img src="img/manual-cases.png" alt="dashboards" width="900">
 </p>
 
