@@ -45,11 +45,12 @@ gradle clean test
 ```
 ### Для удаленного запуска тестов воспользуйтесь [Jenkins](https://jenkins.autotests.cloud/job/09_sprokaev_Web-UI_API/build?delay=0sec)
 Параметры для запуска:
-- BROWSER
-- BROWSER_VERSION
-- REMOTE_DRIVER_URL
-- BROWSER_SIZE
-- THREADS
+     - BROWSER (по умолчанию chrome)
+     - BROWSER_VERSION (по умолчанию 100.0)
+     - BROWSER_SIZE (по умолчанию 1920x1080)
+     - REMOTE_DRIVER_URL (url-адрес selenoid, по умолчанию selenoid.autotests.cloud)
+     - TREADS (по умолчанию 1)
+    
   ![Parametrised build](./img/jenkins-demo.png)
 
 ![Jenkins](./images/jenkins.png)
