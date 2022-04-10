@@ -1,9 +1,10 @@
-# Автотесты разработаны для [Web BonSeller](https://seller.bonpass.com/) 
+# Автотесты (UI & API) разработаны для [Web BonSeller](https://seller.bonpass.com/) 
 ![BonPass](./img/bonpass.png)
 
-##BonSeller
-- это один из сервисов CRM системы [BonPass](https://bonpass.com/)
-- это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
+## BonSeller
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:heavy_check_mark: это один из сервисов CRM системы [BonPass](https://bonpass.com/)
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:heavy_check_mark: это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
+> *Данное веб приложение является частью разработки **[BonPass](https://bonpass.com/)**, реализованной компанией **[ООО "Гейм Системс"](https://bonpass.com/)***
 
 ## :spiral_notepad: Тестовое покрытие:
 
