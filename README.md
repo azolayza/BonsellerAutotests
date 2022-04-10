@@ -42,12 +42,15 @@ BonSeller
 * [Telegram Bot](https://core.telegram.org/bots) - для оповещения о прохождении тестов
 * ## Запуск и прохождение тестов:
 
-### Команда для локального запуска тестов:
+### Локальный запуск тестов:
 
 ```
 gradle clean test 
 ```
-### Для удаленного запуска тестов воспользуйтесь [Jenkins](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/build?delay=0sec)
+## <img width="4%" title="Jenkins" src="img/logo/jenkins-logo.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/build?delay=0sec)
+
+### :pushpin: Параметры сборки
+
 Параметры для запуска:
 - BROWSER (по умолчанию chrome)
 - BROWSER_VERSION (по умолчанию 100.0)
@@ -62,14 +65,49 @@ gradle clean test
 ### Видео-отчет о прохождении теста из Selenoid:
 ![Selenoid](./img/video.gif)
 
-### Результаты прохождения тестов в [Allure Report](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/17/allure/)
+### Отчет о результатах тестирования в Allure Report 
+[Allure Report](https://jenkins.autotests.cloud/job/010-AzoLayza-HW25/17/allure/)
+## <img width="4%" title="Allure Report" src="img/logo/allure-report-logo.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/8/allure/)
+
+### :pushpin: Общая информация
+
+*Главная страница Allure-отчета содержит следующие информационные блоки:*
+
+>- [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
+>- [x] <code><strong>*TREND*</strong></code> - отображает тренд прохождения тестов от сборки к сборке
+>- [x] <code><strong>*SUITES*</strong></code> - отображает распределение результатов тестов по тестовым наборам
+>- [x] <code><strong>*ENVIRONMENT*</strong></code> - отображает тестовое окружение, на котором запускались тесты (в данном случае информация не задана)
+>- [x] <code><strong>*CATEGORIES*</strong></code> - отображает распределение неуспешно прошедших тестов по видам дефектов
+>- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - отображает распределение тестов по функционалу, который они проверяют
+>- [x] <code><strong>*EXECUTORS*</strong></code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
+
 ![Allure1](./img/allure-report1.png)
 
-### Результаты прохождения тестов в Allure TestOps
-![Allure2](./img/testOps-testcases.png)
+## <img width="4%" title="Allure TestOPS" src="img/logo/allure-testops-logo.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1222/dashboards/)
 
-### Результаты прохождения тестов в Jira
-![Allure2](./img/bonseller-jira-task.png)
+### :pushpin: Основной дашборд
+
+<p align="center">
+  <img src="img/TESTOPS-dashboard1.png" alt="dashboards" width="900">
+</p>
+
+### :pushpin: Запуски
+
+<p align="center">
+  <img src="img/testops-launches.png" alt="launches" width="900">
+</p>
+
+### :pushpin: Тест-кейсы
+
+<p align="center">
+  <img src="img/testOps-testcases.png" alt="test cases" width="900">
+</p>
+
+## <img width="4%" title="Jira" src="img/logo/jira-logo.svg"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-269)
+
+<p align="center">
+  <img src="img/bonseller-jira-task.png" alt="jira" width="1000">
+</p>
 
 ### Уведомление о прохождении тестов в Telegram
 ![Allure2](./img/telegram-bonseller-report.png)
