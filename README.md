@@ -122,7 +122,7 @@ gradle clean test
   <img src="img/bonseller-jira-task.png" alt="jira" width="1000">
 </p>
 
-## <img width="4%" title="Telegram" src="images/daramirra_Telegram.svg"> Уведомления в Telegram
+## <img width="4%" title="Telegram" src="img/logo/telegram-logo.svg"> Уведомления в Telegram
 
 <p align="center">
   <img src="img/telegram-bonseller-report.png" alt="Telegram" width="440">
