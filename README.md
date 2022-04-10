@@ -2,9 +2,8 @@
 ![BonPass](./img/bonpass.png)
 
 ## BonSeller
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:heavy_check_mark: это один из сервисов CRM системы [BonPass](https://bonpass.com/)
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:heavy_check_mark: это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
-> *Данное веб приложение является частью разработки **[BonPass](https://bonpass.com/)**, реализованной компанией **[ООО "Гейм Системс"](https://bonpass.com/)***
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это один из сервисов CRM системы [BonPass](https://bonpass.com/)
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
 
 ## :spiral_notepad: Тестовое покрытие:
 
@@ -50,7 +49,27 @@
 * [Allure TestOps](https://docs.qameta.io/allure-testops/) и [Allure Report](http://allure.qatools.ru) - для управления тестами, анализа их прохождения и оформления отчетности
 * [Jira](https://www.atlassian.com/software/jira) - для отслеживания задач
 * [Telegram Bot](https://core.telegram.org/bots) - для оповещения о прохождении тестов
-* ## Запуск и прохождение тестов:
+
+## Особенности реализации тестов:
+
+### UI тесты:
+
+- [x] Page Object
+- [x] Параметризованная сборка
+- [x] owner.config
+- [x] Интеграция с Jira
+- [x] Тестпланы авто- и ручного тестирования
+- [x] Задачи на дефекты
+
+### API тесты (REST API):
+
+- [x] Использование библиотеки [Rest-assured](https://rest-assured.io/) 
+- [x] Спецификации (оформлен единый шаблон оформления запроса и ответа)
+- [x] Описание модели получаемых данных с помощью библиотеки [Lombok](https://projectlombok.org/api/)
+- [x] Лямбда-подход для описания Allure Step
+- [x] Шаблоны форматирования логов запросов
+
+## Запуск и прохождение тестов:
 
 ### Локальный запуск тестов:
 
