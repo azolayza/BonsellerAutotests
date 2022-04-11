@@ -1,13 +1,15 @@
 package com.azovcevae.tests.API.spec;
 
+import com.azovcevae.pages.ApiMethods;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-
 import static io.restassured.RestAssured.with;
 
-public class BonSellerSpec {
+public class BonSellerSpec extends ApiMethods{
+
+
     public static RequestSpecification request = with()
             .filter(new AllureRestAssured())
             .baseUri("https://kvqc57eyx7.execute-api.eu-central-1.amazonaws.com")

@@ -1,7 +1,6 @@
 package com.azovcevae.tests.API;
 
 import com.azovcevae.allure.JiraIssue;
-import com.azovcevae.allure.JiraIssues;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.pages.ApiMethods;
@@ -26,20 +25,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Owner("azovtsevae")
 @Layer("api")
 @Microservice("BonSeller")
+@JiraIssue("HOMEWORK-366")
 @Feature("API-tests")
 @DisplayName("Проверка методов Bonseller API")
 public class BonSellerApiTests {
-
     ApiMethods api = new ApiMethods();
     String token = api.authorization(SELLER_W_PHONE, SELLER_PASS);
-
     String orderDetails = "{\"products\":[{\"productId\":749708,\"amount\":2,\"cost\":5600.0}],\"gifts\":[],\"customerId\":891}";
 
     @Test
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка генерации токена во время логина")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.BLOCKER)
     void SuccessGenerateBonsellerToken() {
         String data = "{\"login\":\"79009005050\",\"password\":\"2508\"}";
@@ -58,11 +55,9 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения профиля кассира")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void getSellerProfile(){
-        SellerProfile sellerProfile =given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+    void getSellerProfile() {
+        SellerProfile sellerProfile = given(BonSellerSpec.request)
                 .when()
                 .get("/v1/profile")
                 .then()
@@ -76,28 +71,26 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения плана продаж кассира")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void getSellerPlan(){
+    void getSellerPlan() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .when()
                 .get("/v1/plan")
                 .then()
                 .spec(BonSellerSpec.responseSpec)
-                .body("newClientsPlan",notNullValue())
-                .body("earningsPlan",notNullValue());
+                .body("newClientsPlan", notNullValue())
+                .body("earningsPlan", notNullValue());
     }
 
     @Test
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения списка скриптов для кассира")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.TRIVIAL)
-    void getSellerScripts(){
+    void getSellerScripts() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .when()
                 .get("/v1/scripts")
                 .then()
@@ -109,28 +102,26 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения каталога продуктов заведения")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.CRITICAL)
-    void getProductsList(){
+    void getProductsList() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .when()
                 .get("/v1/products")
                 .then()
                 .spec(BonSellerSpec.responseSpec)
                 .body("versionToken", notNullValue())
-                .body("products",hasSize(greaterThan(0)));
+                .body("products", hasSize(greaterThan(0)));
     }
 
     @Test
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения получения списка черновиков (сохраненных) чеков")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void getWaitingList(){
+    void getWaitingList() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .when()
                 .get("/v1/payments/waiting")
                 .then()
@@ -142,11 +133,10 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения истории продаж за выбранный период времени")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void getHistoryOnPeriod(){
+    void getHistoryOnPeriod() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .param("pageSize", "10")
                 .param("pageNumber", "1")
                 .param("from", "2022-01-01")
@@ -162,11 +152,10 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения отчета по скидкам за выбранный период времени")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void getReportOnPeriod(){
+    void getReportOnPeriod() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .param("from", "2022-01-01")
                 .param("to", "2022-04-01")
                 .when()
@@ -182,32 +171,31 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Проверка получения информации о покупателе по номеру телефона")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.CRITICAL)
-    void searchCustomerByPhone(){
+    void searchCustomerByPhone() {
         String customerPhone = "79059050505";
         Customer customer =
-        given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
-                .param("is_code", "false")
-                .when()
-                .get("/v1/customers/search/" + customerPhone)
-                .then()
-                .spec(BonSellerSpec.responseSpec)
-                .extract().as(Customer.class);
+                given(BonSellerSpec.request)
+                        .header("Authorization", "Bearer " + token)
+                        .param("is_code", "false")
+                        .when()
+                        .get("/v1/customers/search/" + customerPhone)
+                        .then()
+                        .spec(BonSellerSpec.responseSpec)
+                        .extract().as(Customer.class);
         assertThat(customer.getPhoneLastDigits()).isEqualTo("0505");
-        assertThat(customer.getName()).isEqualTo("Елизавета");;
+        assertThat(customer.getName()).isEqualTo("Елизавета");
+        ;
     }
 
     @Test
     @Story("API тесты для web bonseller")
     @DisplayName("Создание нового заказа для идентифицированного покупателя")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.BLOCKER)
-    void confirmedNewOrderWithCustomer(){
+    void confirmedNewOrderWithCustomer() {
         given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
+                .header("Authorization", "Bearer " + token)
                 .body(orderDetails)
                 .when()
                 .post("/v3.0/payments/confirmed")
@@ -222,38 +210,36 @@ public class BonSellerApiTests {
     @Story("API тесты для web bonseller")
     @DisplayName("Создание новой анонимной покупки без идентификации покупателя")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void confirmedNewOrderForAnonymous(){
+    void confirmedNewOrderForAnonymous() {
         String orderDetails = "{\"products\":[{\"productId\":749708,\"amount\":2,\"cost\":5600.0}],\"gifts\":[]}";
         Order order =
                 given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
-                .body(orderDetails)
-                .when()
-                .post("/v3.0/payments/confirmed")
-                .then()
-                .spec(BonSellerSpec.responseSpec)
+                        .header("Authorization", "Bearer " + token)
+                        .body(orderDetails)
+                        .when()
+                        .post("/v3.0/payments/confirmed")
+                        .then()
+                        .spec(BonSellerSpec.responseSpec)
                         .extract().as(Order.class);
         assertThat(order.getStatus()).isEqualTo(3);
-        assertThat(order.getAmountForPayment()).isEqualTo(11200.00);;
+        assertThat(order.getAmountForPayment()).isEqualTo(11200.00);
     }
 
     @Test
     @Story("API тесты для web bonseller")
     @DisplayName("Создание черновика (status=2) заказа для идентифицированного покупателя")
     @Tags({@Tag("api"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-366")})
     @Severity(SeverityLevel.NORMAL)
-    void savedNewOrderWithCustomer(){
+    void savedNewOrderWithCustomer() {
         Order order =
                 given(BonSellerSpec.request)
-                .header("Authorization", "Bearer "+ token)
-                .body(orderDetails)
-                .when()
-                .post("/v3.0/payments/saved")
-                .then()
-                .spec(BonSellerSpec.responseSpec)
+                        .header("Authorization", "Bearer " + token)
+                        .body(orderDetails)
+                        .when()
+                        .post("/v3.0/payments/saved")
+                        .then()
+                        .spec(BonSellerSpec.responseSpec)
                         .extract().as(Order.class);
         assertThat(order.getStatus()).isEqualTo(2);
         assertThat(order.getAmountForPayment()).isEqualTo(11200.00);

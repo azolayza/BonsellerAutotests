@@ -11,20 +11,3 @@ public class Customer {
     private String phoneLastDigits;
     private boolean isNewCustomer;
 }
-
-/*
-{
-    "customerId": 4594,
-    "name": "Елизавета",
-    "phoneLastDigits": "0505",
-    "balance": {
-        "amount": 2687
-    },
-    "status": {
-        "name": "Профи клиент",
-        "cashback": 25.0
-    },
-    "inviterCanBeSet": false,
-    "isNewCustomer": false
-}
- */

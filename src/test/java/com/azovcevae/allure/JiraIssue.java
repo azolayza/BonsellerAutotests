@@ -8,7 +8,6 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
-@Repeatable(JiraIssues.class)
 @LabelAnnotation(name = "jira")
 public @interface JiraIssue {
     String value();

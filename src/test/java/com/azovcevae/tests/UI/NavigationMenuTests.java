@@ -1,7 +1,6 @@
 package com.azovcevae.tests.UI;
 
 import com.azovcevae.allure.JiraIssue;
-import com.azovcevae.allure.JiraIssues;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.pages.WebElementsPage;
@@ -16,58 +15,66 @@ import static io.qameta.allure.Allure.step;
 @Owner("azovtsevae")
 @Layer("ui")
 @Microservice("BonSeller")
+@JiraIssue("HOMEWORK-367")
 @Feature("WEB-Navigation")
 @DisplayName("Проверка навигации по страницам Bonseller через меню")
-public class NavigationMenuTests extends TestBaseUI {
+public class NavigationMenuTests extends TestBase {
 
-    WebElementsPage bonsellerPage = new WebElementsPage();
+    WebElementsPage webElementsPage = new WebElementsPage();
 
     @Test
     @Description("Тест проверяет команду Выход через главное меню и возврат на страницу атворизации")
     @DisplayName("Успешный выход из приложения")
     @Tags({@Tag("ui"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void logoutSeller() {
-        step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
-        step("check identification block is visible", () -> bonsellerPage.identificationShouldBeVisible());
-        step("logout user from app", () -> bonsellerPage.logoutSeller());
+        step("open dev.seller.bonpass.com and login", () ->
+                webElementsPage.successLoginSeller());
+        step("check identification block is visible", () ->
+                webElementsPage.identificationShouldBeVisible());
+        step("logout user from app", () ->
+                webElementsPage.logoutSeller());
     }
-
 
     @Test
     @Description("Тест проверяет переход с главной страницы на страницу Истории")
     @DisplayName("Переход на страницу Истории через меню")
     @Tags({@Tag("ui"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void goToHistoryPage() {
-        step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
-        step("open main menu", () -> bonsellerPage.clickMenuIcon());
-        step("select History and check page", () -> bonsellerPage.goToHistoryPage());
+        step("open dev.seller.bonpass.com and login", () ->
+                webElementsPage.successLoginSeller());
+        step("open main menu", () ->
+                webElementsPage.clickMenuIcon());
+        step("select History and check page", () ->
+                webElementsPage.goToHistoryPage());
     }
 
     @Test
     @Description("Тест проверяет переход с главной страницы на страницу Отчета")
     @DisplayName("Переход на страницу Отчета через меню")
     @Tags({@Tag("ui"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void goToReportPage() {
-        step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
-        step("open main menu", () -> bonsellerPage.clickMenuIcon());
-        step("select Report and check page", () -> bonsellerPage.goToReportPage());
+        step("open dev.seller.bonpass.com and login", () ->
+                webElementsPage.successLoginSeller());
+        step("open main menu", () ->
+                webElementsPage.clickMenuIcon());
+        step("select Report and check page", () ->
+                webElementsPage.goToReportPage());
     }
 
     @Test
     @Description("Тест проверяет переход с главной страницы на страницу Справки")
     @DisplayName("Переход на страницу Справки через меню")
     @Tags({@Tag("ui"), @Tag("bonseller")})
-    @JiraIssues({@JiraIssue("HOMEWORK-367")})
     @Severity(SeverityLevel.NORMAL)
     void goToHelpPage() {
-        step("open dev.seller.bonpass.com and login", () -> bonsellerPage.successLoginSeller());
-        step("open main menu", () -> bonsellerPage.clickMenuIcon());
-        step("select Help and check page", () -> bonsellerPage.goToHelpPage());
+        step("open dev.seller.bonpass.com and login", () ->
+                webElementsPage.successLoginSeller());
+        step("open main menu", () ->
+                webElementsPage.clickMenuIcon());
+        step("select Help and check page", () ->
+                webElementsPage.goToHelpPage());
     }
 }

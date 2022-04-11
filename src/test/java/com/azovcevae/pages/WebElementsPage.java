@@ -1,7 +1,8 @@
 package com.azovcevae.pages;
 
-import com.azovcevae.tests.UI.TestBaseUI;
+import com.azovcevae.tests.UI.TestBase;
 import com.codeborne.selenide.SelenideElement;
+
 import java.time.Duration;
 
 import static com.azovcevae.data.UsersData.*;
@@ -12,33 +13,32 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class WebElementsPage extends TestBaseUI {
+public class WebElementsPage extends TestBase {
 
     SelenideElement
-        //login = $(byAttribute("type", "tel")),
-        login = $("[type='tel']"),
-        password = $(byAttribute("type", "password")),
-        submitLogin = $(".button"),
-        ratingIcon = $(".rating"),
-        profileName = $(".profile"),
-        errorDialog = $(".error-dialog"),
-        menuIcon = $(".nav-icon"),
-        logoutIcon = $(byText("Выход")),
-        loginInput = $(".text-input"),
-        identification = $(".identification"),
-        historyIcon = $(byText("История операций")),
-        historyBlock = $(".scrollable"),
-        reportIcon = $(byText("Отчет")),
-        helpIcon = $(byText("Справка")),
-        helpPageBlock = $(".reference-wrapper");
+            login = $("[type='tel']"),
+            password = $(byAttribute("type", "password")),
+            submitLogin = $(".button"),
+            ratingIcon = $(".rating"),
+            profileName = $(".profile"),
+            errorDialog = $(".error-dialog"),
+            menuIcon = $(".nav-icon"),
+            logoutIcon = $(byText("Выход")),
+            loginInput = $(".text-input"),
+            identification = $(".identification"),
+            historyIcon = $(byText("История операций")),
+            historyBlock = $(".scrollable"),
+            reportIcon = $(byText("Отчет")),
+            helpIcon = $(byText("Справка")),
+            helpPageBlock = $(".reference-wrapper");
 
-    public WebElementsPage openPage(){
-        open("https://dev.seller.bonpass.com/login");
+    public WebElementsPage openPage() {
+        open("/login");
         return this;
     }
 
     public WebElementsPage loginSeller() {
-        open("https://dev.seller.bonpass.com/login");
+        open("/login");
         login.click();
         login.setValue(SELLER_PHONE);
         password.setValue(SELLER_PASS);
@@ -48,7 +48,7 @@ public class WebElementsPage extends TestBaseUI {
     }
 
     public WebElementsPage loginSellerWithIncorrectPass() {
-        open("https://dev.seller.bonpass.com/login");
+        open("/login");
         login.click();
         login.setValue(SELLER_PHONE);
         password.setValue(SELLER_PASS_INCORRECT);
@@ -57,7 +57,7 @@ public class WebElementsPage extends TestBaseUI {
     }
 
     public WebElementsPage loginSellerWithIncorrectPhone() {
-        open("https://dev.seller.bonpass.com/login");
+        open("/login");
         login.click();
         login.setValue(SELLER_PHONE_INCORRECT);
         password.setValue(SELLER_PASS);
@@ -65,46 +65,47 @@ public class WebElementsPage extends TestBaseUI {
         return this;
     }
 
-    public WebElementsPage nameSellerShouldBeVisible(){
-        profileName.shouldHave(text("Потапова Полина"));
+    public WebElementsPage nameSellerShouldBeVisible() {
+        profileName.shouldHave(text(SELLER_NAME));
         return this;
     }
 
-    public WebElementsPage errorOfLoginAlert(){
+    public WebElementsPage errorOfLoginAlert() {
         errorDialog.should(appear, Duration.ofSeconds(30));
         errorDialog.shouldHave(text("Неверный логин или пароль. " +
-                        "Используйте ваш номер телефона и выданный пароль для входа"));
+                "Используйте ваш номер телефона и выданный пароль для входа"));
         return this;
     }
 
-    public WebElementsPage logoutSeller(){
+    public WebElementsPage logoutSeller() {
         menuIcon.click();
         logoutIcon.click();
         loginInput.shouldHave(text("Логин продавца"));
         return this;
     }
 
-    public WebElementsPage identificationShouldBeVisible(){
+    public WebElementsPage identificationShouldBeVisible() {
         identification.shouldHave(text("Идентификация клиента"));
         return this;
     }
 
-    public WebElementsPage clickMenuIcon(){
+    public WebElementsPage clickMenuIcon() {
         menuIcon.click();
         return this;
     }
 
-    public WebElementsPage goToHistoryPage(){
+    public WebElementsPage goToHistoryPage() {
         historyIcon.click();
         historyBlock.shouldHave(text("История операций"));
         return this;
     }
 
-    public WebElementsPage goToReportPage(){
+    public WebElementsPage goToReportPage() {
         reportIcon.click();
         historyBlock.shouldHave(text("Отчет"));
         return this;
     }
+
     public WebElementsPage goToHelpPage() {
         helpIcon.click();
         helpPageBlock.shouldHave(text("Инструкция по работе с BonSeller"));
@@ -112,8 +113,9 @@ public class WebElementsPage extends TestBaseUI {
     }
 
     public WebElementsPage successLoginSeller() {
-    openPage();
-    loginSeller();
-    return this;}
+        openPage();
+        loginSeller();
+        return this;
+    }
 }
 
