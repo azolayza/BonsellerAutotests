@@ -10,9 +10,17 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI Authorization And Navigation tests
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
-<p align="left">
-  <img src="img/ui-cases.png" alt="dashboards" width="1000">
-</p>
+> Кнопка Войти недоступна без пароля
+> Кнопка Войти недоступна без логина (телефона)
+> Ошибка авторизации с неверным паролем
+> Ошибка авторизации с неверным телефоном
+> Проверка успешной авторизации
+> Переход на страницу Истории через меню
+> Переход на страницу Отчета через меню
+> Переход на страницу Справки через меню
+> Успешный выход из приложения
+> Проверка отсутствия ошибок в консоли для внутренней страницы в авторизованном режиме
+> Проверка отсутсвия ошибок в консоли для страницы атворизации
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
