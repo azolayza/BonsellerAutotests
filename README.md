@@ -2,28 +2,28 @@
 ![BonPass](./img/bonpass.png)
 
 ## BonSeller
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это один из сервисов CRM системы [BonPass](https://bonpass.com/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; это один из сервисов CRM системы [BonPass](https://bonpass.com/)
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:paperclip: это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; это веб приложение для кассиров ( оформление продаж с учетом настроенной в CRM программы лояльности, скидок и акций)
 
 ## :spiral_notepad: Тестовое покрытие:
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI Authorization And Navigation tests
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
 <p align="left">
-  <img src="img/ui-cases.png" alt="dashboards" width="900">
+  <img src="img/ui-cases.png" alt="dashboards">
 </p>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
 <p align="left">
-  <img src="img/api-cases.png" alt="dashboards" width="900">
+  <img src="img/api-cases.png" alt="dashboards">
 </p>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manual cases
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-367)
 <p align="left">
-  <img src="img/manual-cases.png" alt="dashboards" width="900">
+  <img src="img/manual-cases.png" alt="dashboards">
 </p>
 
 ## :rocket: Технологии и инструменты
