@@ -11,19 +11,19 @@
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI Authorization And Navigation tests
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-370)
 <p align="left">
-  <img src="img/ui-cases.png" alt="dashboards">
+  <img src="img/ui-cases.png" alt="dashboards" width="1000">
 </p>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; API tests
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-366)
 <p align="left">
-  <img src="img/api-cases.png" alt="dashboards">
+  <img src="img/api-cases.png" alt="dashboards" width="1000">
 </p>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manual cases
 :lock_with_ink_pen: задача [JIRA](https://jira.autotests.cloud/browse/HOMEWORK-367)
 <p align="left">
-  <img src="img/manual-cases.png" alt="dashboards">
+  <img src="img/manual-cases.png" alt="dashboards" width="1000">
 </p>
 
 ## :rocket: Технологии и инструменты
