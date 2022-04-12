@@ -4,7 +4,6 @@ import com.azovcevae.allure.JiraIssue;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.helper.DriverUtils;
-import com.azovcevae.pages.LoginPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -24,7 +23,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("WEB-Authorization")
 @DisplayName("Проверка Bonseller веб авторизации")
 public class AuthorizationTests extends TestBase {
-    LoginPage loginPage = new LoginPage();
 
    @Test
    @Description("Тест проверяет авторизацию продавца в приложении Веб Бонселлер по номеру телефона и коду авторизации)")

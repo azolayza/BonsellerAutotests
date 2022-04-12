@@ -29,6 +29,4 @@ public class ApiMethods {
         String token = jsonPath.get("token");
         return token;
     }
-
-
 }

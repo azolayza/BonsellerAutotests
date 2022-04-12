@@ -4,6 +4,8 @@ import com.azovcevae.config.Project;
 import com.azovcevae.helper.AllureAttachments;
 import com.azovcevae.helper.DriverSettings;
 import com.azovcevae.helper.DriverUtils;
+import com.azovcevae.pages.LoginPage;
+import com.azovcevae.pages.MainPage;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -15,6 +17,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
+    LoginPage loginPage = new LoginPage();
+    MainPage mainPage = new MainPage();
+
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
