@@ -1,6 +1,6 @@
 package com.azovcevae.data;
 
-public class UsersData {
+public class SellerData {
     public static final String
             SELLER_W_PHONE = "79009005050",
             SELLER_PHONE = "9009005050",

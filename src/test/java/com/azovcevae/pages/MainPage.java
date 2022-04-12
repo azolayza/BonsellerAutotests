@@ -1,13 +1,12 @@
 package com.azovcevae.pages;
 
-import com.azovcevae.tests.UI.TestBase;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class MainPage extends TestBase {
+public class MainPage {
 
     SelenideElement
             menuIcon = $(".nav-icon"),

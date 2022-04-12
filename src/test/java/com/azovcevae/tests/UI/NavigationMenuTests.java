@@ -4,8 +4,6 @@ import com.azovcevae.allure.JiraIssue;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
 import com.azovcevae.helper.DriverUtils;
-import com.azovcevae.pages.LoginPage;
-import com.azovcevae.pages.MainPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -22,9 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("WEB-Navigation")
 @DisplayName("Проверка навигации по страницам Bonseller через меню")
 public class NavigationMenuTests extends TestBase {
-
-    LoginPage loginPage = new LoginPage();
-    MainPage mainPage = new MainPage();
 
     @Test
     @Description("Тест проверяет команду Выход через главное меню и возврат на страницу атворизации")

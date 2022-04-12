@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import java.time.Duration;
 
-import static com.azovcevae.data.UsersData.*;
+import static com.azovcevae.data.SellerData.*;
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.by;
