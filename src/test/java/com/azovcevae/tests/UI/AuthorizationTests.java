@@ -3,7 +3,8 @@ package com.azovcevae.tests.UI;
 import com.azovcevae.allure.JiraIssue;
 import com.azovcevae.allure.Layer;
 import com.azovcevae.allure.Microservice;
-import com.azovcevae.pages.WebElementsPage;
+import com.azovcevae.helper.DriverUtils;
+import com.azovcevae.pages.LoginPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,9 +13,9 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.disabled;
 import static com.codeborne.selenide.Selectors.by;
-import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @Owner("azovtsevae")
 @Layer("ui")
@@ -23,7 +24,7 @@ import static io.qameta.allure.Allure.step;
 @Feature("WEB-Authorization")
 @DisplayName("Проверка Bonseller веб авторизации")
 public class AuthorizationTests extends TestBase {
-    WebElementsPage webElementsPage = new WebElementsPage();
+    LoginPage loginPage = new LoginPage();
 
    @Test
    @Description("Тест проверяет авторизацию продавца в приложении Веб Бонселлер по номеру телефона и коду авторизации)")
@@ -32,9 +33,9 @@ public class AuthorizationTests extends TestBase {
    @Severity(SeverityLevel.BLOCKER)
    void successLogin() {
        step("open dev.seller.bonpass.com and login", () ->
-               webElementsPage.successLoginSeller());
+               loginPage.successLoginSeller());
        step("check name user in navbar", () ->
-               webElementsPage.nameSellerShouldBeVisible());
+               loginPage.nameSellerShouldBeVisible());
     }
 
     @Test
@@ -44,7 +45,7 @@ public class AuthorizationTests extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     void unavailableLoginWithoutPhone() {
         step("open https://dev.seller.bonpass.com/login", () ->
-                webElementsPage.openPage());
+                loginPage.openPage());
         step("check Submit button unavailable in login page", () -> {
             $(by("type", "password")).setValue("2508");
             $(".button").shouldBe(disabled);
@@ -58,7 +59,7 @@ public class AuthorizationTests extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     void unavailableLoginWithoutPass() {
         step("open https://dev.seller.bonpass.com/login", () ->
-                webElementsPage.openPage());
+                loginPage.openPage());
         step("check Submit button unavailable in login page", () -> {
             $(by("type", "tel")).setValue("9009005050");
             $(".button").shouldBe(disabled);
@@ -72,11 +73,11 @@ public class AuthorizationTests extends TestBase {
     @Severity(SeverityLevel.TRIVIAL)
     void negativeLoginWithInvalidPhone() {
         step("open https://dev.seller.bonpass.com/login", () ->
-                webElementsPage.openPage());
+                loginPage.openPage());
         step("login user with incorrect password", () ->
-                webElementsPage.loginSellerWithIncorrectPhone());
+                loginPage.loginSellerWithIncorrectPhone());
         step("check error dialog", () ->
-                webElementsPage.errorOfLoginAlert());
+                loginPage.errorOfLoginAlert());
     }
 
     @Test
@@ -86,10 +87,24 @@ public class AuthorizationTests extends TestBase {
     @Severity(SeverityLevel.TRIVIAL)
     void negativeLoginWithInvalidPass() {
         step("open https://dev.seller.bonpass.com/login", () ->
-                webElementsPage.openPage());
+                loginPage.openPage());
         step("login user with incorrect password", () ->
-                webElementsPage.loginSellerWithIncorrectPass());
+                loginPage.loginSellerWithIncorrectPass());
         step("check error dialog", () ->
-                webElementsPage.errorOfLoginAlert());
+                loginPage.errorOfLoginAlert());
+    }
+
+    @Test
+    @Description("Тест проверяет ниличие ошибок в консоли с типом Error")
+    @DisplayName("Лог консоли страницы логина не содержит ошибок")
+    void consoleShouldNotHaveErrorsTest() {
+        step("Open url 'https://dev.seller.bonpass.com/login'", () ->
+                loginPage.openPage());
+
+        step("Console logs should not contain text 'SEVERE'", () -> {
+            String consoleLogs = DriverUtils.getConsoleLogs();
+            String errorText = "SEVERE";
+            assertThat(consoleLogs).doesNotContain(errorText);
+        });
     }
 }
